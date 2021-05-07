@@ -135,14 +135,16 @@ This schedule will be used to keep track of your progress throughout the week an
 |---|---| ---|
 |May 6-7| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
 |May 7| Project Approval | Incomplete
-|May 7| Core Application Structure | Incomplete
+|May 7| Core Application Structure: .env, folders,  | Incomplete
 |May 7| Pseudocode | Incomplete
-|May 8| Pseudocode | Incomplete
-|May 9| Initial Clickable Model  | Incomplete
-|May 10| MVP | Incomplete
+|May 7| Skeletal Component structure / Get, Set Data | Incomplete
+|May 8| Continue Component Structure| Incomplete
+|May 8| Post | Incomplete
+|May 9| Cont'd Post| Incomplete
+|May 10|CSS Components| Incomplete
 |May 11| MVP | Incomplete
-|May 12| MVP | Incomplete
-|May 13| PMVP | Incomplete
+|May 12| Deployed MVP | Incomplete
+|May 13| PMVP and Advanced CSS | Incomplete
 |May 14| Presentations | Incomplete
 
 ## Timeframes
@@ -153,14 +155,23 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 56hrs| 5hrs | 5hrs |
+| AirTable Setup | H | 1hrs| .5hrs | .5hrs |
+| Core Application Structure | H | 1.5hrs| Xhrs | Xhrs |
+| Pseudocode | H | 2.5hrs| Xhrs | Xhrs |
+| Component Structure / Get, Set Data | H | 3hrs| Xhrs | Xhrs |
+| Post | H | 10hrs| Xhrs | Xhrs |
+| CSS Components | H | 8.5hrs| Xhrs | Xhrs |
+| MVP | H | 3hrs| Xhrs | Xhrs |
+| PMVP | H | 7hrs| Xhrs | Xhrs |
+| Advanced CSS | H | 7hrs| Xhrs | Xhrs |
+| Site Run-Through and Test | H | 1hrs| Xhrs | Xhrs |
+| Clean Up Code and Comments | H | 1.5hrs| Xhrs | Xhrs |
+| Total | H | 56hrs| Xhrs | Xhrs |
 
 ## SWOT Analysis
 
 ### Strengths:
-I feel confident in my logic and styling 
+I feel confident in my  understanding of concepts and styling , although I haven't applied logic to a game yet.
 
 ### Weaknesses: 
 
