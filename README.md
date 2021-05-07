@@ -133,7 +133,7 @@ This schedule will be used to keep track of your progress throughout the week an
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|May 6-7| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
+|May 6-7| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |May 7| Project Approval | Incomplete
 |May 7| Core Application Structure: .env, folders,  | Incomplete
 |May 7| Pseudocode | Incomplete
@@ -149,24 +149,30 @@ This schedule will be used to keep track of your progress throughout the week an
 
 ## Timeframes
 
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
-
-Time frames are also key in the development cycle.  You have limited time to code all parts of your app.  Your estimates can then be used to evalute possibilities based on time needed and the actual time you have before the app must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add an additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
-
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | AirTable Setup | H | 1hrs| .5hrs | .5hrs |
 | Core Application Structure | H | 1.5hrs| Xhrs | Xhrs |
 | Pseudocode | H | 2.5hrs| Xhrs | Xhrs |
-| Component Structure / Get, Set Data | H | 3hrs| Xhrs | Xhrs |
-| Post | H | 10hrs| Xhrs | Xhrs |
-| CSS Components | H | 8.5hrs| Xhrs | Xhrs |
-| MVP | H | 3hrs| Xhrs | Xhrs |
+| Nav and Footer | H | 2hrs| Xhrs | Xhrs |
+| Play and Questions Structure | H | 3hrs| Xhrs | Xhrs |
+| Results and Comments Structure | H | 3hrs| Xhrs | Xhrs |
+| How to Structure | H | 2hrs| Xhrs | Xhrs |
+| Play Get, Set Data | H | 6hrs| Xhrs | Xhrs | |
+| Results Get, Set Data | H | 6hrs| Xhrs | Xhrs | |
+| Link Route Components | H | 2hrs| Xhrs | Xhrs
+| Play Q&A Post: Data Create and Update | H | 5hrs| Xhrs | Xhrs |
+|Results & CommentPost: Data Create and Update | H | 5hrs| Xhrs | Xhrs |
+| Nav and Footer CSS Components | H | 2hrs| Xhrs | Xhrs |
+| How To Page CSS | H | 2hrs| Xhrs | Xhrs |
+| Play and Questions CSS | H | 2hrs| Xhrs | Xhrs |
+| Results CSS | H | 2hrs| Xhrs | Xhrs |
+| Homepage CSS  | H | 2hrs| Xhrs | Xhrs |
 | PMVP | H | 7hrs| Xhrs | Xhrs |
-| Advanced CSS | H | 7hrs| Xhrs | Xhrs |
+| Advanced CSS | H | 4hrs| Xhrs | Xhrs |
 | Site Run-Through and Test | H | 1hrs| Xhrs | Xhrs |
 | Clean Up Code and Comments | H | 1.5hrs| Xhrs | Xhrs |
-| Total | H | 56hrs| Xhrs | Xhrs |
+| Total | H | Xhrs| Xhrs | Xhrs |
 
 ## SWOT Analysis
 
