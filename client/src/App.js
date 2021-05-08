@@ -1,6 +1,6 @@
 // import link and route
 import axios from 'axios';
-import { baseURL, config } from './services';
+import { questionsBaseURL, commentsBaseURL, config } from './services';
 import { Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Footer from './components/Footer';
@@ -20,19 +20,21 @@ function App() {
   // get data for questions and comments
   useEffect(() => {
     const fetchQuestions = async () => {
-      const resp = await axios.get(`${baseURL}/questions`, config)
-      console.log(resp.data.records);
+      const resp = await axios.get(questionsBaseURL, config)
+      // console.log(resp.data.records);
       setQuestions(resp.data.records);
     }
     fetchQuestions();
     const fetchComments = async () => {
-      const resp = await axios.get(`${baseURL}/comments`, config)
-      console.log(resp.data.records);
+      const resp = await axios.get(commentsBaseURL, config)
+      // console.log(resp.data.records);
       setComments(resp.data.records);
     }
     fetchComments();
-  }, []);
+  }, [toggleFetch]);
 
+  console.log(questions);
+  console.log(comments);
 
   return (
     <div className="App">
@@ -45,11 +47,13 @@ function App() {
       </Route>
 
       <Route path="/results">
+        {/* pass props of questions and comments */}
         <Results />
       </Route>
 
       <Route path="/play">
-        <Play />
+        {/* pass props of questions */}
+        <Play questions={questions}/>
       </Route>
 
       <Footer />
