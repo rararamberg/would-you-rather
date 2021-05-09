@@ -1,4 +1,3 @@
-// import link and route
 import axios from 'axios';
 import { questionsBaseURL, commentsBaseURL, config } from './services';
 import { Route } from 'react-router-dom';
