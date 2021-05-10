@@ -71,7 +71,7 @@ function Results(props) {
                     setShowMore(!showMore);
                   }}
                 >
-                  Show Less
+                  Less
                 </button>
               </div>
               // end question result div
@@ -94,7 +94,7 @@ function Results(props) {
                     setShowMore(!showMore);
                   }}
                 >
-                  Show More
+                  More
                 </button>
               </div>
             );
