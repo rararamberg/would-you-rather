@@ -11,9 +11,13 @@ function Nav() {
       <Link to="/">
         <h1>Would You Rather?</h1>        
       </Link>
-      <Link to="/how">How To</Link>
-      <Link to="/results">Results</Link>
-      <Link to="/play">Play!</Link>
+      <div className="menut items">
+        <Link to="/how">How To</Link>
+        <span> / </span>
+        <Link to="/results">Results</Link>
+        <span> / </span>
+        <Link to="/play">Play!</Link>
+      </div>
     </nav>
   )
 }
