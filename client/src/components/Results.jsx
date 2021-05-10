@@ -1,5 +1,3 @@
-// import axios from 'axios';
-// import { commentsBaseURL, config } from '../services';
 import { useState } from "react";
 import CommentFeed from "./CommentFeed";
 import CommentForm from "./CommentForm";

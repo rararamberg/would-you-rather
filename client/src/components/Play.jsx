@@ -11,6 +11,7 @@ function Play(props) {
   const [currQ, setCurrQ] = useState(0);
   // useParams?
   const params = useParams();
+  // useHistory?? for results and module?
   const history = useHistory();
 
   // create function that takes you to next prompt
@@ -22,7 +23,6 @@ function Play(props) {
   // example: user then answers  props.question[1]
   // props.question[curr] => user selects => props.question[curr++]
   // }
-  // useHistory?? for results and module?
 
   // create vote function
   const vote = async (isA) => {
