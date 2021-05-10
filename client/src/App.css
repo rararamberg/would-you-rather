@@ -69,3 +69,22 @@ nav {
   align-items: center;
   align-content: space-between;
 }
+
+.how-to {
+  margin: 0 auto;
+  padding: 5px 10px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; */
+}
+
+.what-is, .where-at{
+  text-align: left;
+  margin: 5px auto;
+}
+
+.how-do {
+  text-align: right;
+  margin: 5px auto;
+}
