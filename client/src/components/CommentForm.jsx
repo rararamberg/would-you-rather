@@ -1,7 +1,11 @@
-
+import { useState } from 'react';
 
 // may combine to CommentFeed
 function CommentForm() {
+  const [author, setAuthor] = useState('');
+  const [comment, setComment] = useState('');
+
+  
   return (
     <form>
       <h5>Form: Join the Discussion</h5>

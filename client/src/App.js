@@ -33,7 +33,7 @@ function App() {
   }, [toggleFetch]);
 
   console.log(questions);
-  console.log(comments);
+  // console.log(comments);
 
   return (
     <div className="App">
@@ -47,12 +47,12 @@ function App() {
 
       <Route path="/results">
         {/* pass props of questions and comments */}
-        <Results />
+        <Results questions={questions} comments={comments} setToggleFetch={setToggleFetch} />
       </Route>
 
       <Route path="/play">
         {/* pass props of questions */}
-        <Play questions={questions}/>
+        <Play questions={questions} setToggleFetch={setToggleFetch}/>
       </Route>
 
       <Footer />

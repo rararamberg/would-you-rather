@@ -1,45 +1,89 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import axios from 'axios';
 import { questionsBaseURL, config } from '../services';
 
 function Play(props) {
-  const [voteA, setVoteA] = useState(0);
-  const [voteB, setVoteB] = useState(0);
-    // useState to set OptionA and optionB count
-  // create +1 incremement function for each A and B button
-  // create function that takes you to next prompt
-  // user answer post request to tally optionA and optionB
+  // useState to set OptionA and optionB count
+  // or just one useState for question?
+  // const [voteA, setVoteA] = useState(0);
+  // const [voteB, setVoteB] = useState(0);
+  const [currQ, setCurrQ] = useState(0);
   // useParams?
-  // useHistory?? for results and module?
   const params = useParams();
+  const history = useHistory();
+  
 
-  useEffect(() => {
-    if (params.id && props.questions.length) {
-      const question = props.questions.find((question) => question.id === params.id);   
-      if (question) {
-        setVoteA(question.fields.voteA);
-        setVoteB(question.fields.voteB);
+  // create function that takes you to next prompt
+  console.log(props.questions.length)
+  // (for let i = 0 ; i < props.questions.length; i++){
+    //  play game starts props.question[0]
+    // once player clicks button of their 'rather' 
+    // prompt moves to next question (i++)
+    // example: user then answers  props.question[1]
+    // props.question[curr] => user selects => props.question[curr++]
+  // }
+  // useHistory?? for results and module?
+
+  // create vote function
+  const vote = async (isA) => {
+    if (isA) {
+      const updatedQuestionA = {
+        ...props.questions[currQ].fields,
+        voteA: props.questions[currQ].fields.voteA + 1,
       }
+      const specificQuestionsURL = `${questionsBaseURL}/${props.questions[currQ].id}`;
+      await axios.put(specificQuestionsURL, {fields: updatedQuestionA} , config)
+    } else {
+      const updatedQuestionB = {
+        ...props.questions[currQ].fields,
+        voteB: props.questions[currQ].fields.voteB + 1,
+      }
+      const specificQuestionsURL = `${questionsBaseURL}/${props.questions[currQ].id}`;
+      await axios.put(specificQuestionsURL, {fields: updatedQuestionB} , config)
     }
-  }, [props.questions, params.id]);
+    props.setToggleFetch((curr) => !curr);
 
-  const incrementA = () => {
-    // e.preventDefault();
-    console.log("voteA + 1")
-    // if (params.id) {
-    //   const specificQuestionsURL = `${questionsBaseURL}/params.id`;
-    //   await axios.put(specificQuestionsURL, {voteA: setVoteA(voteA + 1)}, config )
-    // } else {
-    //   console.log("it didn't work")
-    // }
+    if (currQ === props.questions.length - 1) {
+      console.log('game completed, forward to results page')
+      history.push("/results");
+    } else {
+      setCurrQ(currQ + 1)
+    }
   }
+  
 
-  const incrementB = async (e) => {
-    // e.preventDefault();
-    // setVoteA(voteB + 1)
-    console.log("voteB + 1")
-  }
+  // useEffect(() => {
+  //   if (params.id && props.questions.length) {
+  //     const question = props.questions.find((question) => question.id === params.id);   
+  //     if (question) {
+  //       setVoteA(question.fields.voteA);
+  //       setVoteB(question.fields.voteB);
+  //     }
+  //   }
+  // }, [props.questions, params.id]);
+
+  
+  // create +1 incremement function for each A and B button
+  // user answer post request to tally optionA and optionB
+  // use PUT or PATCH ???
+  // const incrementA = () => {
+  //   e.preventDefault();
+  //   console.log("voteA + 1")
+  //   setVoteA(voteA + 1)
+  //   if (params.id) {
+  //     const specificQuestionsURL = `${questionsBaseURL}/params.id`;
+  //     await axios.put(specificQuestionsURL, {voteA: setVoteA(voteA + 1)}, config )
+  //   } else {
+  //     console.log("it didn't work")
+  //   }
+  // }
+
+  // const incrementB = () => {
+  //   // e.preventDefault();
+  //   console.log("voteB + 1")
+  //   setVoteB(voteB + 1)
+  // }
 
 
   return (
@@ -55,19 +99,22 @@ function Play(props) {
           <p className="option-a">Option A ...{question.fields.optionA}</p>
           <p className="or">OR</p>
           <p classname="option-b">Option B... {question.fields.optionB}</p>
+          {/* test tag for opt a count */}
+          <p>TEST Opt A Count: ({question.fields.voteA})</p>
+          <p>TEST Opt B Count: ({question.fields.voteB})</p>
+          {/* <form className="choice-submit"></form> */}
           {/* buttons A and B go here */}
           {/* do i need to submit in a form */}
-          {/* test tag for opt a count */}
-          <p>TEST Opt A Count: {question.fields.voteA}</p>
-          <p>TEST Opt B Count: {question.fields.voteB}</p>
-          {/* <form className="choice-submit"></form> */}
-            {/* Onclick run increment function optionA or optionB by one */}
-            {/* onClick move to the next question */}
-            {/* onClick={() => {incrementA()  nextModule}} */}
-            <button onClick={incrementA}>A</button>
+          {/* onClick={() => {incrementA()  nextModule}} */}
+          {/* wrap link around buttons to next prompt?? */}
+          {/* Onclick run increment function optionA or optionB by one */}
+          {/* onClick move to the next question */}
+          <button onClick={() => vote(true)}>A</button>
+          {/* onClick={incrementA} */}
           {/* onClick={() => setVoteB(voteB + 1)} */}
           {/* how would we post this change to module */}
-            <button onClick={incrementB}>B</button>
+          {/* onClick={incrementB} */}
+          <button onClick={() => vote(false)}>B</button>
         </div>
       ))}
     </main>
