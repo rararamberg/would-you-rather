@@ -1,23 +1,42 @@
 import { useState } from 'react';
+import { commentsBaseURL, config } from '../services';
+import axios from 'axios';
 
 // may combine to CommentFeed
-function CommentForm() {
+function CommentForm(props) {
   const [author, setAuthor] = useState('');
   const [comment, setComment] = useState('');
 
-  
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const newComment = {
+      author,
+      comment,
+      questionId: props.question.fields.commentId
+    }
+    await axios.post(commentsBaseURL, { fields: newComment }, config);
+    props.setToggleFetch((curr) => !curr);
+    setAuthor("")
+    setComment("")
+  }
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <h5>Form: Join the Discussion</h5>
       <label htmlFor="author">Name or Username:</label>
       <input
         id="author"
         type="text"
+        value={author}
+        onChange={(e) => setAuthor(e.target.value)}
       />
       <label htmlFor="author">Comment:</label>
-      <input
+      <textarea
         id="comment"
         type="text"
+        value={comment}
+        onChange={(e) => setComment(e.target.value)}
       />
       <button>Add</button>
     </form>
