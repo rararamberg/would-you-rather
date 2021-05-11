@@ -26,6 +26,7 @@ function CommentForm(props) {
       <h5>Form: Join the Discussion</h5>
       <label htmlFor="author">Name or Username:</label>
       <input
+        required
         id="author"
         type="text"
         value={author}
@@ -33,6 +34,7 @@ function CommentForm(props) {
       />
       <label htmlFor="author">Comment:</label>
       <textarea
+        required
         id="comment"
         type="text"
         value={comment}
