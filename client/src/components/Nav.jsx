@@ -9,7 +9,8 @@ function Nav() {
     // align How,Results, Play right
     <nav>
       <Link to="/">
-        <h1>Would You Rather?</h1>        
+        <h1 className="full-text">Would You Rather?</h1>
+        <h1 className="short-text">WYR?</h1>
       </Link>
       <div className="menut items">
         <Link to="/how">How To</Link>

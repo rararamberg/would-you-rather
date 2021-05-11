@@ -64,6 +64,11 @@ nav {
   padding: 5px 20px;
 }
 
+nav .short-text {
+  display: none;
+}
+
+
 .menu-items {
   display: flex;
   flex-wrap: nowrap;
@@ -92,6 +97,28 @@ nav {
 }
 
 
-@media screen {
-  
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav .full-text {
+    font-size: 75px;
+    margin: 10px 0px 35px 0px;
+  }
+
+  .menu-items {
+    margin-bottom: 35px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav .full-text {
+    display: none;
+  }
+
+  nav .short-text {
+    display: inline-block;
+    font-size: 70px;
+  }
 }
