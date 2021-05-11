@@ -1,29 +1,14 @@
-import { useState, useEffect } from "react";
-import { useParams, useHistory } from "react-router-dom";
+import { useState} from "react";
+import { useHistory } from "react-router-dom";
 import axios from "axios";
 import { questionsBaseURL, config } from "../services";
 
 function Play(props) {
-  // useState to set OptionA and optionB count
-  // or just one useState for question?
-  // const [voteA, setVoteA] = useState(0);
-  // const [voteB, setVoteB] = useState(0);
   const [currQ, setCurrQ] = useState(0);
-  // useParams?
-  const params = useParams();
-  // useHistory?? for results and module?
   const history = useHistory();
 
   // create function that takes you to next prompt
-  console.log(props.questions.length);
-  // (for let i = 0 ; i < props.questions.length; i++){
-  //  play game starts props.question[0]
-  // once player clicks button of their 'rather'
-  // prompt moves to next question (i++)
-  // example: user then answers  props.question[1]
-  // props.question[curr] => user selects => props.question[curr++]
-  // }
-
+  // console.log(props.questions.length);
   // create vote function
   const vote = async (isA) => {
     if (isA) {
@@ -59,37 +44,6 @@ function Play(props) {
     }
   };
 
-  // useEffect(() => {
-  //   if (params.id && props.questions.length) {
-  //     const question = props.questions.find((question) => question.id === params.id);
-  //     if (question) {
-  //       setVoteA(question.fields.voteA);
-  //       setVoteB(question.fields.voteB);
-  //     }
-  //   }
-  // }, [props.questions, params.id]);
-
-  // create +1 incremement function for each A and B button
-  // user answer post request to tally optionA and optionB
-  // use PUT or PATCH ???
-  // const incrementA = () => {
-  //   e.preventDefault();
-  //   console.log("voteA + 1")
-  //   setVoteA(voteA + 1)
-  //   if (params.id) {
-  //     const specificQuestionsURL = `${questionsBaseURL}/params.id`;
-  //     await axios.put(specificQuestionsURL, {voteA: setVoteA(voteA + 1)}, config )
-  //   } else {
-  //     console.log("it didn't work")
-  //   }
-  // }
-
-  // const incrementB = () => {
-  //   // e.preventDefault();
-  //   console.log("voteB + 1")
-  //   setVoteB(voteB + 1)
-  // }
-
   return (
     <main className="play">
       <h2>This is the Play Page</h2>
@@ -100,7 +54,9 @@ function Play(props) {
       {/* first set all questions here */}
       {/* map questions with a prop of  and display each question with */}
       {props.questions.map((question) => {
-        {/* goal: display one question at a time. when user selects next question appears  */ }
+        {
+          /* goal: display one question at a time. when user selects next question appears  */
+        }
         // consider ternary statement?
         if (question === props.questions[currQ]) {
           return (
@@ -112,19 +68,12 @@ function Play(props) {
               {/* test tag for opt a count */}
               <p>TEST Opt A Count: ({question.fields.voteA})</p>
               <p>TEST Opt B Count: ({question.fields.voteB})</p>
-              
               {/* buttons A and B go here */}
-              {/* Onclick run increment function optionA or optionB by one */}
-              {/* onClick move to the next question */}
               <button onClick={() => vote(true)}>A</button>
-              {/* onClick={incrementA} */}
-              {/* onClick={() => setVoteB(voteB + 1)} */}
-              {/* how would we post this change to module */}
-              {/* onClick={incrementB} */}
               <button onClick={() => vote(false)}>B</button>
             </div>
           );
-        } 
+        }
       })}
     </main>
   );

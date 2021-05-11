@@ -6,7 +6,7 @@ function PieGraph(props) {
     const percentB = Math.round((b / (a + b)) * 100);
 
     if (percentA > percentB) {
-      console.log(percentA + "%");
+      // console.log(percentA + "%");
       return (
         <p>
           <span
@@ -19,7 +19,7 @@ function PieGraph(props) {
         </p>
       );
     } else if (percentB > percentA) {
-      console.log(percentB + "%");
+      // console.log(percentB + "%");
       return (
         <p>
           A: {percentA + "%"} vs.{" "}
