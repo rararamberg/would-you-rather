@@ -3,36 +3,13 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import CommentFeed from "./CommentFeed";
 import CommentForm from "./CommentForm";
+import PieGraph from "./PieGraph"
 
 function Results(props) {
   const filterComments = (question) =>
     props.comments.filter(
       (comment) => question.fields.commentId === comment.fields.questionId
     );
-  
-  const determineMajority = (optionA, optionB) => {
-    
-    const percentA = (Math.floor((optionA / (optionA + optionB)) * 100))
-    
-    const percentB = (Math.floor((optionB / (optionA + optionB)) * 100))
-    
-    if (percentA > percentB) {
-      console.log(percentA + "%")
-      return (
-        <p>A: {percentA + "%"}</p>
-      )
-    } else if (percentB > percentA) {
-      console.log(percentB + "%")
-      return (
-        <p>B: {percentB + "%"}</p>
-      )
-    } else {
-      return (
-        <p>It's a tie</p>
-      )
-    }
-
-  }
 
   return (
     <main className="results-main">
@@ -51,16 +28,14 @@ function Results(props) {
                     <h3>WYR...</h3>
                   </Card.Title>
                   <Card.Subtitle>
-                    (OptionA) {question.fields.optionA} or (OptionB){" "}
+                    {question.fields.optionA} OR{" "} 
                     {question.fields.optionB}
                   </Card.Subtitle>
                   {/* use percentages to display */}
                   <Card.Text>
-                    (voteA) {question.fields.voteA} vs. (voteB){" "}
-                    {question.fields.voteB}
-                    {determineMajority(question.fields.voteA, question.fields.voteB)}
+                    <PieGraph question={question} />
                   </Card.Text>
-                  <h4> TEMP comment id: {question.fields.commentId}</h4>
+                  <h6> TEMP comment id: {question.fields.commentId}</h6>
                   {/* insert comment feed component */}
                   {/* insert comment form */}
                   <Accordion.Toggle
