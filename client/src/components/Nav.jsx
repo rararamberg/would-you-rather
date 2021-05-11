@@ -11,6 +11,7 @@ function Nav() {
       <Link to="/">
         <h1 className="full-text">Would You Rather?</h1>
         <h1 className="short-text">WYR?</h1>
+        {/* Reference: https://stackoverflow.com/questions/39894291/how-to-change-text-not-font-size-according-to-screen-size-in-css/39894493 */}
       </Link>
       <div className="menut items">
         <Link to="/how">How To</Link>

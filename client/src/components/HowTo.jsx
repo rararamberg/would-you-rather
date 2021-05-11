@@ -13,7 +13,7 @@ function HowTo() {
       <section className="how-do">
         <h3>How Do I Play?</h3>
         <p>
-          To play, you are taken through a module of questions where you must pick which scenario you'd rather go with. Simply click the button of your scenario choice. Instead of getting to know new coworkers or potential contacts at a networking event, you get to play the game at the comfort or your desktop or phone. After your run of questions, you can view results and see where majority lies on which scenarios.
+          To play, you are taken through a module of questions where you must pick which scenario you'd rather go with. Simply click the button of your scenario choice. Instead of getting to know new coworkers or potential contacts at a networking event, you get to play the game at the comfort of your desktop or phone. Once game is completed, you can view results and see where majority lies on which scenarios.
         </p>
       </section>
 
