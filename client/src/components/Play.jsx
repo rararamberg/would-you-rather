@@ -100,7 +100,8 @@ function Play(props) {
       {/* first set all questions here */}
       {/* map questions with a prop of  and display each question with */}
       {props.questions.map((question) => {
-      {/* goal: display one question at a time. when user selects next question appears  */}
+        {/* goal: display one question at a time. when user selects next question appears  */ }
+        // consider ternary statement?
         if (question === props.questions[currQ]) {
           return (
             <div key={question.id} className="question-prompt">
@@ -123,9 +124,7 @@ function Play(props) {
               <button onClick={() => vote(false)}>B</button>
             </div>
           );
-        } else {
-          return (<h2>Page Loading...</h2>)
-        }
+        } 
       })}
     </main>
   );
