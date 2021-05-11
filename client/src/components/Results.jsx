@@ -1,8 +1,6 @@
 import Accordion from "react-bootstrap/Accordion";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import CardDeck from "react-bootstrap/CardDeck";
-import { useState } from "react";
 import CommentFeed from "./CommentFeed";
 import CommentForm from "./CommentForm";
 
@@ -11,6 +9,30 @@ function Results(props) {
     props.comments.filter(
       (comment) => question.fields.commentId === comment.fields.questionId
     );
+  
+  const determineMajority = (optionA, optionB) => {
+    
+    const percentA = (Math.floor((optionA / (optionA + optionB)) * 100))
+    
+    const percentB = (Math.floor((optionB / (optionA + optionB)) * 100))
+    
+    if (percentA > percentB) {
+      console.log(percentA + "%")
+      return (
+        <p>A: {percentA + "%"}</p>
+      )
+    } else if (percentB > percentA) {
+      console.log(percentB + "%")
+      return (
+        <p>B: {percentB + "%"}</p>
+      )
+    } else {
+      return (
+        <p>It's a tie</p>
+      )
+    }
+
+  }
 
   return (
     <main className="results-main">
@@ -36,6 +58,7 @@ function Results(props) {
                   <Card.Text>
                     (voteA) {question.fields.voteA} vs. (voteB){" "}
                     {question.fields.voteB}
+                    {determineMajority(question.fields.voteA, question.fields.voteB)}
                   </Card.Text>
                   <h4> TEMP comment id: {question.fields.commentId}</h4>
                   {/* insert comment feed component */}
