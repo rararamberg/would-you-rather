@@ -1,4 +1,5 @@
 import { Pie } from 'react-chartjs-2';
+import { lastWord } from '../services';
 
 
 function Majority(props) {
@@ -9,13 +10,7 @@ function Majority(props) {
 
   // Get last word of each option in question
   // Reference: https://stackoverflow.com/questions/20883404/javascript-returning-the-last-word-in-a-string
-  const lastWord = (words) => {
-    const newArr = words.split(" ");
-    return  (newArr[newArr.length - 1]);
-  }
-
-
-
+  
   const determineMajority = (a, b) => {
     const percentA = Math.round((a / (a + b)) * 100);
     const percentB = Math.round((b / (a + b)) * 100);

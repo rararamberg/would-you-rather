@@ -5,6 +5,10 @@ export const config = {
     Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
   },
 };
+export const lastWord = (words) => {
+  const newArr = words.split(" ");
+  return  (newArr[newArr.length - 1]);
+}
 
 // remember after  URL you have to add /questions or /comments
 // consider whether useful to export two baseURLs for comments and questions

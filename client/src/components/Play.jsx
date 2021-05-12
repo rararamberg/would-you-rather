@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import { questionsBaseURL, config } from "../services";
+import { lastWord } from '../services';
 
 function Play(props) {
   const [currQ, setCurrQ] = useState(0);
@@ -46,15 +47,15 @@ function Play(props) {
           return (
             <div key={question.id} className="question-prompt">
               <h3 className="wyr">Would you rather...</h3>
-              <p className="option-a">Option A ...{question.fields.optionA}</p>
+              <p className="option-a">{question.fields.optionA}</p>
               <p className="or">OR</p>
-              <p classname="option-b">Option B... {question.fields.optionB}</p>
+              <p classname="option-b">{question.fields.optionB}</p>
               {/* test tag for opt a count */}
               {/* <p>TEST Opt A Count: ({question.fields.voteA})</p>
               <p>TEST Opt B Count: ({question.fields.voteB})</p> */}
               {/* buttons A and B go here */}
-              <button onClick={() => vote(true)}>A</button>
-              <button onClick={() => vote(false)}>B</button>
+              <button onClick={() => vote(true)}>{lastWord(question.fields.optionA)}</button>
+              <button onClick={() => vote(false)}>{lastWord(question.fields.optionB)}</button>
             </div>
           );
         }
