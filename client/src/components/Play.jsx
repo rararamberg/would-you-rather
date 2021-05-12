@@ -1,8 +1,9 @@
+import Button from "react-bootstrap/Button";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import { questionsBaseURL, config } from "../services";
-import { lastWord } from '../services';
+import { lastWord } from "../services";
 
 function Play(props) {
   const [currQ, setCurrQ] = useState(0);
@@ -53,8 +54,20 @@ function Play(props) {
               {/* <p>TEST Opt A Count: ({question.fields.voteA})</p>
               <p>TEST Opt B Count: ({question.fields.voteB})</p> */}
               {/* buttons A and B go here */}
-              <button onClick={() => vote(true)}>{lastWord(question.fields.optionA)}</button>
-              <button onClick={() => vote(false)}>{lastWord(question.fields.optionB)}</button>
+              <Button
+                size="lg"
+                style={{ backgroundColor: "#00adb5", fontWeight: "bold" }}
+                onClick={() => vote(true)}
+              >
+                {lastWord(question.fields.optionA)}
+              </Button>
+              <Button
+                size="lg"
+                style={{ backgroundColor: "#ff5722", fontWeight: "bold" }}
+                onClick={() => vote(false)}
+              >
+                {lastWord(question.fields.optionB)}
+              </Button>
             </div>
           );
         }

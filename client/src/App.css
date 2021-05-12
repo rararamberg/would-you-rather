@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  color: #303841;
+  background-color: #EEE;
 }
 
 .App-logo {
@@ -75,6 +77,7 @@ nav .short-text {
   justify-content: space-between;
   align-items: center;
   align-content: space-between;
+  color: #00adb5;
 }
 
 .how-to {

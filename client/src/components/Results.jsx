@@ -13,8 +13,8 @@ function Results(props) {
 
   return (
     <main className="results-main">
-      <h2>This is the Results Page</h2>
-      <p>Poll results of questions and comments sections go here</p>
+      <h2>Results Are In!</h2>
+      <p>See below what scenario won over other</p>
       {/* questions.map()to display each Qs results */}
       {/* click or tap to show more and display comments section */}
       <div className="results-container">
