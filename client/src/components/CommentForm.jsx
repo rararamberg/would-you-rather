@@ -23,7 +23,6 @@ function CommentForm(props) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h5>Form: Join the Discussion</h5>
       <label htmlFor="author">Name or Username:</label>
       <input
         required
