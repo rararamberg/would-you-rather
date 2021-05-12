@@ -31,7 +31,7 @@ function Majority(props) {
           </span>
         </p>
       );
-    } else {
+    } else if (percentA === percentB){
       return (
         <p>
           <span
@@ -42,6 +42,10 @@ function Majority(props) {
           </span>
         </p>
       );
+    } else {
+      return (
+        <p><em>New Question Added!</em></p>
+      )
     }
   };
   return <div>{determineMajority(voteA, voteB)}</div>;

@@ -13,7 +13,7 @@ function CommentForm(props) {
     const newComment = {
       author,
       comment,
-      questionId: props.question.fields.commentId
+      questions: [props.question.id]
     }
     await axios.post(commentsBaseURL, { fields: newComment }, config);
     props.setToggleFetch((curr) => !curr);

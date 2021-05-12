@@ -57,7 +57,7 @@ function App() {
 
       <Route path="/results">
         {/* pass props of questions and comments */}
-        <Results questions={questions} comments={comments} setToggleFetch={setToggleFetch} />
+        <Results questions={questions} linkedQuestions={linkedQuestions} comments={comments} setToggleFetch={setToggleFetch} />
       </Route>
 
       <Route path="/play">

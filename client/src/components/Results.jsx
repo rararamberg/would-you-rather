@@ -19,7 +19,7 @@ function Results(props) {
       {/* will i need to create a new component for this div / its functionality */}
       {/* click or tap to show more and display comments section */}
       <div className="results-container">
-        {props.questions.map((question) => {
+        {props.linkedQuestions.map((question) => {
           return (
             <Accordion>
               <Card key={question.id} className="question-result">
@@ -31,8 +31,8 @@ function Results(props) {
                     {question.fields.optionA}.. OR{" "}.. 
                     {question.fields.optionB}
                   </Card.Subtitle>
-                  {/* use percentages to display */}
                   <Card.Text>
+                    {/* use percentages to display */}
                     <Majority question={question} />
                   </Card.Text>
                   {/* <h6> TEMP comment id: {question.fields.commentId}</h6> */}
