@@ -3,17 +3,23 @@ import { Pie } from 'react-chartjs-2';
 
 function Majority(props) {
   const { optionA, optionB, voteA, voteB } = props.question.fields;
-  const percentageA = Math.round((voteA / (voteA + voteB) * 100))
-    
+
+  const percentageA = Math.round((voteA / (voteA + voteB) * 100)) 
   const percentageB = Math.round((voteB / (voteA + voteB) * 100))
-  
+
+  // Get last word of each option in question
+  // Reference: https://stackoverflow.com/questions/20883404/javascript-returning-the-last-word-in-a-string
+  const lastWord = (words) => {
+    const newArr = words.split(" ");
+    return  (newArr[newArr.length - 1]);
+  }
+
+
 
   const determineMajority = (a, b) => {
     const percentA = Math.round((a / (a + b)) * 100);
     const percentB = Math.round((b / (a + b)) * 100);
-
     if (percentA > percentB) {
-      // console.log(percentA + "%");
       return (
         <p>
           <span
@@ -26,7 +32,6 @@ function Majority(props) {
         </p>
       );
     } else if (percentB > percentA) {
-      // console.log(percentB + "%");
       return (
         <p>
           A: {percentA + "%"} vs.{" "}
@@ -57,10 +62,9 @@ function Majority(props) {
   };
 
   const data = {
-    labels: ['A', 'B'],
+    labels: [lastWord(optionA), lastWord(optionB)],
     datasets: [
       {
-        label: 'vote pie chart',
         data: [percentageA, percentageB],
         backgroundColor: [
           'rgb(255, 87, 33)',
@@ -74,9 +78,9 @@ function Majority(props) {
     tooltips: {
       callbacks: {
         label: function(tooltipItem, data) {
-          let dataset = data.datasets[tooltipItem.datasetIndex];
-          let currentValue = dataset.data[tooltipItem.index];
-          return currentValue +  '%';
+          const dataset = data.datasets[tooltipItem.datasetIndex];
+          const currentValue = dataset.data[tooltipItem.index];
+          return currentValue + '%';
         },
         title: function(tooltipItem, data) {
           return data.labels[tooltipItem[0].index];

@@ -9,7 +9,6 @@ import Nav from './components/Nav';
 import Play from './components/Play';
 import Results from './components/Results';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 function App() {
