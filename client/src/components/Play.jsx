@@ -66,8 +66,8 @@ function Play(props) {
               <p className="or">OR</p>
               <p classname="option-b">Option B... {question.fields.optionB}</p>
               {/* test tag for opt a count */}
-              <p>TEST Opt A Count: ({question.fields.voteA})</p>
-              <p>TEST Opt B Count: ({question.fields.voteB})</p>
+              {/* <p>TEST Opt A Count: ({question.fields.voteA})</p>
+              <p>TEST Opt B Count: ({question.fields.voteB})</p> */}
               {/* buttons A and B go here */}
               <button onClick={() => vote(true)}>A</button>
               <button onClick={() => vote(false)}>B</button>

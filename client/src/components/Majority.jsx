@@ -1,5 +1,8 @@
+import { Pie } from 'react-chartjs-2';
+
+
 function Majority(props) {
-  const { voteA, voteB } = props.question.fields;
+  const { optionA, optionB, voteA, voteB } = props.question.fields;
 
   const determineMajority = (a, b) => {
     const percentA = Math.round((a / (a + b)) * 100);
@@ -48,7 +51,24 @@ function Majority(props) {
       )
     }
   };
-  return <div>{determineMajority(voteA, voteB)}</div>;
+
+  const data = {
+    labels: ["A", "B"],
+    datasets: [
+      {
+        data:[voteA, voteB]
+      }
+    ]
+  }
+
+
+  return (
+    <div>
+      {determineMajority(voteA, voteB)}
+      <canvas id="pieChart">
+        <Pie />
+      </canvas>
+    </div>);
 }
 
 export default Majority;
