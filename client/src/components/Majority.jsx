@@ -1,16 +1,15 @@
-import { Pie } from 'react-chartjs-2';
-import { lastWord } from '../services';
-
+import { Pie } from "react-chartjs-2";
+import { lastWord } from "../services";
 
 function Majority(props) {
   const { optionA, optionB, voteA, voteB } = props.question.fields;
 
-  const percentageA = Math.round((voteA / (voteA + voteB) * 100)) 
-  const percentageB = Math.round((voteB / (voteA + voteB) * 100))
+  const percentageA = Math.round((voteA / (voteA + voteB)) * 100);
+  const percentageB = Math.round((voteB / (voteA + voteB)) * 100);
 
   // Get last word of each option in question
   // Reference: https://stackoverflow.com/questions/20883404/javascript-returning-the-last-word-in-a-string
-  
+
   const determineMajority = (a, b) => {
     const percentA = Math.round((a / (a + b)) * 100);
     const percentB = Math.round((b / (a + b)) * 100);
@@ -38,7 +37,7 @@ function Majority(props) {
           </span>
         </p>
       );
-    } else if (percentA === percentB){
+    } else if (percentA === percentB) {
       return (
         <p>
           <span
@@ -51,8 +50,10 @@ function Majority(props) {
       );
     } else {
       return (
-        <p><em>New Question Added!</em></p>
-      )
+        <p>
+          <em>New Question Added!</em>
+        </p>
+      );
     }
   };
 
@@ -61,36 +62,33 @@ function Majority(props) {
     datasets: [
       {
         data: [percentageA, percentageB],
-        backgroundColor: [
-          'rgb(255, 87, 33)',
-          'rgb(1, 172, 181)',
-        ],
+        backgroundColor: ["rgb(255, 87, 33)", "rgb(1, 172, 181)"],
+        labelSuffix: "%",
       },
     ],
   };
 
   const option = {
-    tooltips: {
-      callbacks: {
-        label: function(tooltipItem, data) {
-          const dataset = data.datasets[tooltipItem.datasetIndex];
-          const currentValue = dataset.data[tooltipItem.index];
-          return currentValue + '%';
+    plugins: {
+      tooltip: {
+        callbacks: {
+          label: (tooltipItem, data) => {
+            const { formattedValue, label } = tooltipItem;
+
+            return `${label}: ${formattedValue}%`;
+          },
         },
-        title: function(tooltipItem, data) {
-          return data.labels[tooltipItem[0].index];
-        }
-      }
-    }
-  }
+      },
+    },
+  };
 
   return (
     <div>
       {determineMajority(voteA, voteB)}
 
-      <Pie data={data} options={option}/>
-      
-    </div>);
+      <Pie data={data} options={option} />
+    </div>
+  );
 }
 
 export default Majority;

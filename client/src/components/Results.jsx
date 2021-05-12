@@ -24,7 +24,7 @@ function Results(props) {
               <Card key={question.id} className="question-result">
                 <Card.Header>
                   <Card.Title>
-                    <h3>WYR...</h3>
+                    WYR...
                   </Card.Title>
                   <Card.Subtitle>
                     {question.fields.optionA}.. OR ..

@@ -42,7 +42,6 @@ function Play(props) {
         {
           /* goal: display one question at a time. when user selects next question appears  */
         }
-        // consider ternary statement?
         if (question === props.questions[currQ]) {
           return (
             <div key={question.id} className="question-prompt">
