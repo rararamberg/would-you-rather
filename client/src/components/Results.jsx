@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import CommentFeed from "./CommentFeed";
 import CommentForm from "./CommentForm";
-import PieGraph from "./PieGraph"
+import Majority from "./Majority"
 
 function Results(props) {
   const filterComments = (question) =>
@@ -28,14 +28,14 @@ function Results(props) {
                     <h3>WYR...</h3>
                   </Card.Title>
                   <Card.Subtitle>
-                    {question.fields.optionA} OR{" "} 
+                    {question.fields.optionA}.. OR{" "}.. 
                     {question.fields.optionB}
                   </Card.Subtitle>
                   {/* use percentages to display */}
                   <Card.Text>
-                    <PieGraph question={question} />
+                    <Majority question={question} />
                   </Card.Text>
-                  <h6> TEMP comment id: {question.fields.commentId}</h6>
+                  {/* <h6> TEMP comment id: {question.fields.commentId}</h6> */}
                   {/* insert comment feed component */}
                   {/* insert comment form */}
                   <Accordion.Toggle

@@ -1,4 +1,4 @@
-function PieGraph(props) {
+function Majority(props) {
   const { voteA, voteB } = props.question.fields;
 
   const determineMajority = (a, b) => {
@@ -47,4 +47,4 @@ function PieGraph(props) {
   return <div>{determineMajority(voteA, voteB)}</div>;
 }
 
-export default PieGraph;
+export default Majority;

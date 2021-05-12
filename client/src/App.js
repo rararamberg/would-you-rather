@@ -14,26 +14,35 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   const [questions, setQuestions] = useState([]);
+  const [linkedQuestions, setLinkedQuestions] = useState([]);
   const [comments, setComments] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(false);
 
   // get data for questions and comments
   useEffect(() => {
-    const fetchQuestions = async () => {
-      const resp = await axios.get(questionsBaseURL, config)
+    const fetchQuestionsAndComments = async () => {
+      const questionsResp = await axios.get(questionsBaseURL, config)
+      const commentResp = await axios.get(commentsBaseURL, config)
+      const retrievedComments = commentResp.data.records;
+      const retrievedQuestions = questionsResp.data.records.map((question) => {
+        return {
+          ...question,
+          fields: {
+            ...question.fields,
+            comments: question.fields.comments ? retrievedComments.filter((comment) => question.fields.comments.includes(comment.id)) : []
+          }
+        }
+      })
+      setQuestions(questionsResp.data.records);
+      setComments(commentResp.data.records);
       // console.log(resp.data.records);
-      setQuestions(resp.data.records);
-    }
-    fetchQuestions();
-    const fetchComments = async () => {
-      const resp = await axios.get(commentsBaseURL, config)
       // console.log(resp.data.records);
-      setComments(resp.data.records);
+      setLinkedQuestions(retrievedQuestions)
     }
-    fetchComments();
+    fetchQuestionsAndComments();
   }, [toggleFetch]);
 
-  console.log(questions);
+  // console.log(questions);
   // console.log(comments);
 
   return (

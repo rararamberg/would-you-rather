@@ -3,13 +3,12 @@
 // use question id to separate organize comments based on id
 
 function CommentFeed(props) {
+  const {author, comment} = props.comment.fields
   return (
     <div className="comment-feed">
       {/* user can scroll through these functions */}
-      <h6>Feed: comments shown here</h6>
-      <p>Author: {props.comment.fields.author}</p>
-      <p>Comment: {props.comment.fields.comment} </p>
-      <p> question id: {props.comment.fields.questionId}</p>
+      <p>{comment}<em> - {author}</em></p>
+      {/* <p> question id: {props.comment.fields.questionId}</p> */}
     </div>
   )
 }
