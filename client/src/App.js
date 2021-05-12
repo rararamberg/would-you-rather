@@ -13,7 +13,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 function App() {
-  const [questions, setQuestions] = useState([]);
   const [linkedQuestions, setLinkedQuestions] = useState([]);
   const [comments, setComments] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(false);
@@ -33,10 +32,7 @@ function App() {
           }
         }
       })
-      setQuestions(questionsResp.data.records);
       setComments(commentResp.data.records);
-      // console.log(resp.data.records);
-      // console.log(resp.data.records);
       setLinkedQuestions(retrievedQuestions)
     }
     fetchQuestionsAndComments();
@@ -57,12 +53,12 @@ function App() {
 
       <Route path="/results">
         {/* pass props of questions and comments */}
-        <Results questions={questions} linkedQuestions={linkedQuestions} comments={comments} setToggleFetch={setToggleFetch} />
+        <Results questions={linkedQuestions} comments={comments} setToggleFetch={setToggleFetch} />
       </Route>
 
       <Route path="/play">
         {/* pass props of questions */}
-        <Play questions={questions} setToggleFetch={setToggleFetch}/>
+        <Play questions={linkedQuestions} setToggleFetch={setToggleFetch}/>
       </Route>
 
       <Footer />

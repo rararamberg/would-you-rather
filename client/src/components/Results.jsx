@@ -18,7 +18,7 @@ function Results(props) {
       {/* questions.map()to display each Qs results */}
       {/* click or tap to show more and display comments section */}
       <div className="results-container">
-        {props.linkedQuestions.map((question) => {
+        {props.questions.map((question) => {
           return (
             <Accordion>
               <Card key={question.id} className="question-result">

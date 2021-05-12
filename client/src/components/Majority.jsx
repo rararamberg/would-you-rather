@@ -3,6 +3,10 @@ import { Pie } from 'react-chartjs-2';
 
 function Majority(props) {
   const { optionA, optionB, voteA, voteB } = props.question.fields;
+  const percentageA = Math.round((voteA / (voteA + voteB) * 100))
+    
+  const percentageB = Math.round((voteB / (voteA + voteB) * 100))
+  
 
   const determineMajority = (a, b) => {
     const percentA = Math.round((a / (a + b)) * 100);
@@ -53,21 +57,40 @@ function Majority(props) {
   };
 
   const data = {
-    labels: ["A", "B"],
+    labels: ['A', 'B'],
     datasets: [
       {
-        data:[voteA, voteB]
-      }
-    ]
-  }
+        label: 'vote pie chart',
+        data: [percentageA, percentageB],
+        backgroundColor: [
+          'rgb(255, 87, 33)',
+          'rgb(1, 172, 181)',
+        ],
+      },
+    ],
+  };
 
+  const option = {
+    tooltips: {
+      callbacks: {
+        label: function(tooltipItem, data) {
+          let dataset = data.datasets[tooltipItem.datasetIndex];
+          let currentValue = dataset.data[tooltipItem.index];
+          return currentValue +  '%';
+        },
+        title: function(tooltipItem, data) {
+          return data.labels[tooltipItem[0].index];
+        }
+      }
+    }
+  }
 
   return (
     <div>
       {determineMajority(voteA, voteB)}
-      <canvas id="pieChart">
-        <Pie />
-      </canvas>
+
+      <Pie data={data} options={option}/>
+      
     </div>);
 }
 
