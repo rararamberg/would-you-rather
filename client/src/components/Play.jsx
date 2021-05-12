@@ -1,4 +1,4 @@
-import { useState} from "react";
+import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import { questionsBaseURL, config } from "../services";
@@ -11,29 +11,13 @@ function Play(props) {
   // console.log(props.questions.length);
   // create vote function
   const vote = async (isA) => {
-    if (isA) {
-      const updatedQuestionA = {
-        ...props.questions[currQ].fields,
-        voteA: props.questions[currQ].fields.voteA + 1,
-      };
-      const specificQuestionsURL = `${questionsBaseURL}/${props.questions[currQ].id}`;
-      await axios.put(
-        specificQuestionsURL,
-        { fields: updatedQuestionA },
-        config
-      );
-    } else {
-      const updatedQuestionB = {
-        ...props.questions[currQ].fields,
-        voteB: props.questions[currQ].fields.voteB + 1,
-      };
-      const specificQuestionsURL = `${questionsBaseURL}/${props.questions[currQ].id}`;
-      await axios.put(
-        specificQuestionsURL,
-        { fields: updatedQuestionB },
-        config
-      );
-    }
+    const updatedQuestion = {
+      ...props.questions[currQ].fields,
+      voteA: props.questions[currQ].fields.voteA + (isA ? 1 : 0),
+      voteB: props.questions[currQ].fields.voteB + (isA ? 0 : 1),
+    };
+    const specificQuestionsURL = `${questionsBaseURL}/${props.questions[currQ].id}`;
+    await axios.put(specificQuestionsURL, { fields: updatedQuestion }, config);
     props.setToggleFetch((curr) => !curr);
 
     if (currQ === props.questions.length - 1) {
