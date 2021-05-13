@@ -2,6 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   align-content: space-around;
+}
+
+.gif-collage a {
+  display: none;
 }
