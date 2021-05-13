@@ -14,7 +14,6 @@ function Home() {
         <iframe src="https://giphy.com/embed/jpbnkneOMU9UeXXCfd" width="480" height="462" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
         <iframe src="https://giphy.com/embed/kBZBlLVlfECvOQAVno" width="480" height="361" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
         <iframe src="https://giphy.com/embed/lKXEBR8m1jWso" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-          <iframe src="https://giphy.com/embed/O6bZXqgJ8iL84" width="480" height="372" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>  
       </div>
       <p><a href="https://giphy.com/gifs/h">via GIPHY</a></p>
 

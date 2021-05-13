@@ -2,6 +2,7 @@
   text-align: center;
   color: #EEEEEE;
   background-color: #303841;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -141,6 +142,17 @@ nav .short-text {
   justify-content: center;
   align-items: center;
   align-content: space-between;
+}
+
+/* FOOTER */
+
+footer a {
+  margin: 5px;
+  color:#EEEEEE;
+  transition: all 0.2s ease-in-out;
+}
+footer a:hover {
+  color: #FF4304;
 }
 
 
