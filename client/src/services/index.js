@@ -9,6 +9,17 @@ export const lastWord = (words) => {
   const newArr = words.split(" ");
   return  (newArr[newArr.length - 1]);
 }
+export const findEmoji = (category) => {
+  if (category === "deep") {
+      return "🧐"
+  } else if (category === "funny") {
+    return '😂'
+  } else if (category === "hard") {
+    return '😬'
+  } else {
+    return '😊'
+  }
+}
 
 // remember after  URL you have to add /questions or /comments
 // consider whether useful to export two baseURLs for comments and questions

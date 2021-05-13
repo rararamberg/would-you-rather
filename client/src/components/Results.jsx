@@ -4,13 +4,13 @@ import Card from "react-bootstrap/Card";
 import CommentFeed from "./CommentFeed";
 import CommentForm from "./CommentForm";
 import Majority from "./Majority";
+import { findEmoji } from '../services';
 
 function Results(props) {
   // const filterComments = (question) =>
   //   props.comments.filter(
   //     (comment) => question.fields.commentId === comment.fields.questionId
   //   );
-
   return (
     <main className="results-main">
       <h2>Results Are In!</h2>
@@ -28,7 +28,7 @@ function Results(props) {
               >
                 <Card.Header>
                   <Card.Title>
-                    WYR...
+                    WYR... {findEmoji(question.fields.category)}
                   </Card.Title>
                   <Card.Subtitle>
                     {question.fields.optionA}.. OR ..

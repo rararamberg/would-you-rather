@@ -40,7 +40,7 @@ function CommentForm(props) {
         value={comment}
         onChange={(e) => setComment(e.target.value)}
       />
-      <Button style={{backgroundColor: "#303841", fontWeight: 'bold'}}>Add</Button>
+      <Button style={{backgroundColor: "#303841", fontWeight: 'bold', margin: '10px'}}>Add</Button>
     </form>
   )
 }

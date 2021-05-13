@@ -5,7 +5,7 @@
 function CommentFeed(props) {
   const {author, comment} = props.comment.fields
   return (
-    <div className="comment-feed">
+    <div key={props.comment.id} className="comment">
       {/* user can scroll through these functions */}
       <p>{comment}<em> - {author}</em></p>
       {/* <p> question id: {props.comment.fields.questionId}</p> */}

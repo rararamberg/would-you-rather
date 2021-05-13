@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import { questionsBaseURL, config } from "../services";
-import { lastWord } from "../services";
+import { lastWord, findEmoji } from "../services";
 
 function Play(props) {
   const [currQ, setCurrQ] = useState(0);
@@ -51,8 +51,8 @@ function Play(props) {
               className="question-prompt"
               style={{color: "#303841"}}
             >
-                <Card.Body>
-                  <h3 className="wyr">Would you rather...</h3>
+              <Card.Header>
+                  <h3 className="wyr">Would you rather... {findEmoji(question.fields.category)} </h3>
                   <p className="option-a">{question.fields.optionA}</p>
                   <p className="or">OR</p>
                   <p classname="option-b">{question.fields.optionB}</p>
@@ -60,6 +60,8 @@ function Play(props) {
                   {/* <p>TEST Opt A Count: ({question.fields.voteA})</p>
                   <p>TEST Opt B Count: ({question.fields.voteB})</p> */}
                 {/* buttons A and B go here */}
+                </Card.Header>
+                <Card.Body>
                 <div className="buttons-container">
                   <Button
                     size="lg"
