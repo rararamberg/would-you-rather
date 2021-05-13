@@ -33,8 +33,8 @@ function Play(props) {
 
   return (
     <main className="play">
-      <h2>Now it's Your Turn..</h2>
-      <p>
+      <h2 className="head-title">Now it's Your Turn..</h2>
+      <p className="description">
         Go with your heart!  Your gut?  Your logic?  Either way, you choose!
       </p>
       <div className="question-container">
@@ -52,11 +52,11 @@ function Play(props) {
               style={{color: "#303841"}}
             >
               <Card.Header>
-                <Card.Title className="wyr">Would you rather... {findEmoji(question.fields.category)} </Card.Title>
-                <Card.Subtitle>
-                  <p className="option-a">{question.fields.optionA}</p>
-                  <p className="or">OR</p>
-                  <p classname="option-b">{question.fields.optionB}</p>
+                <Card.Title as="h1" className="wyr">Would you rather... {findEmoji(question.fields.category)} </Card.Title>
+                <Card.Subtitle as="h2" className="play-subtitle">
+                  <span className="option-a">{question.fields.optionA}</span>
+                  <span className="or">OR</span>
+                  <span className="option-b">{question.fields.optionB}</span>
                 </Card.Subtitle>
                   {/* test tag for opt a count */}
                   {/* <p>TEST Opt A Count: ({question.fields.voteA})</p>
@@ -64,16 +64,18 @@ function Play(props) {
                 {/* buttons A and B go here */}
                 </Card.Header>
                 <Card.Body>
-                  <Button
+                <Button
+                  variant="dark"
                     size="lg"
-                    style={{ backgroundColor: "#FF5721", fontWeight: "bold" }}
+                    style={{ backgroundColor: "#FF5721" }}
                     onClick={() => vote(true)}
                   >
                     {lastWord(question.fields.optionA)}
                   </Button>
-                  <Button
+                <Button
+                  variant="dark"
                     size="lg"
-                    style={{ backgroundColor: "#01ACB5", fontWeight: "bold", margin: "15px" }}
+                    style={{ backgroundColor: "#01ACB5"}}
                     onClick={() => vote(false)}
                   >
                     {lastWord(question.fields.optionB)}

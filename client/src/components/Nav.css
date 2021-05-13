@@ -8,26 +8,22 @@ nav {
   letter-spacing: 1px;
   margin: 0px 0px 30px 0px;
 }
-
-
 nav a {
   text-decoration: none;
   transition: all 0.2s ease-in-out;
-  border-bottom: 2px solid transparent;
 }
 nav a:hover {
   color: #ff5722;
   border-bottom: 2px solid currentColor;
 }
-
 nav .full-text{
   font-size: 45px;
+  text-shadow: 1px 1px #181c20;
 }
-
 nav .short-text {
   display: none;
+  text-shadow: 1px 1px #181c20;
 }
-
 .menu-items {
   display: flex;
   flex-wrap: nowrap;
@@ -35,12 +31,10 @@ nav .short-text {
   align-items: center;
   align-content: space-between;
 }
-
 .menu-items a {
   color: #00adb5;
   font-size: 18px;
 }
-
 .menu-items span {
   font-size: 18px;
   margin: 0px 5px;

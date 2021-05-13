@@ -1,14 +1,52 @@
-.question-container {
+.wyr {
+  margin-bottom: 15px;
   padding: 20px;
+  font-family: 'Luckiest Guy', cursive;
 }
 
+.btn {
+  width: 205px;
+  height: auto;
+  font-family: 'Luckiest Guy', cursive;
+  letter-spacing: 1.5px;
+  margin: 0px 25px;
+  text-shadow: 1px 1px #303841;
+}
 
-.buttons-container{
+.btn-primary {
+  border-color: #303841;
+}
+
+.head-title {
+  font-weight: bold;
+}
+
+.description {
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.play-subtitle {
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: space-between;
+  padding-top: 20px;
 }
+
+span {
+  line-height: 45px;
+}
+
+.option-a, .option-b {
+  font-weight: bold;
+  margin: 0px 5px;
+}
+
+.question-container {
+  padding: 20px;
+}
+
 
 .question-prompt {
   padding:10px;

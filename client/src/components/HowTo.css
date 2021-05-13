@@ -1,18 +1,21 @@
 .how-to {
   margin: 0 auto;
   padding: 5px 10px;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center; */
+}
+.how-to h2,.how-to h3 {
+  font-family: 'Luckiest Guy', cursive;
+  letter-spacing: 1px;
 }
 
+.how-to p{
+  font-size: 18px;
+}
 .what-is, .where-at{
   text-align: left;
-  margin: 5px auto;
+  margin: 35px auto;
 }
 
 .how-do {
   text-align: right;
-  margin: 5px auto;
+  margin: 55px auto;
 }
