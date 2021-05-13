@@ -11,6 +11,7 @@ function CommentForm(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("handle submit")
     const newComment = {
       author,
       comment,

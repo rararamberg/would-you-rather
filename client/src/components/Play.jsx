@@ -14,6 +14,7 @@ function Play(props) {
   // console.log(props.questions.length);
   // create vote function
   const vote = async (isA) => {
+    console.log('click')
     const updatedQuestion = {
       ...props.questions[currQ].fields,
       voteA: props.questions[currQ].fields.voteA + (isA ? 1 : 0),
@@ -52,34 +53,32 @@ function Play(props) {
               style={{color: "#303841"}}
             >
               <Card.Header>
-                  <h3 className="wyr">Would you rather... {findEmoji(question.fields.category)} </h3>
+                <Card.Title className="wyr">Would you rather... {findEmoji(question.fields.category)} </Card.Title>
+                <Card.Subtitle>
                   <p className="option-a">{question.fields.optionA}</p>
                   <p className="or">OR</p>
                   <p classname="option-b">{question.fields.optionB}</p>
+                </Card.Subtitle>
                   {/* test tag for opt a count */}
                   {/* <p>TEST Opt A Count: ({question.fields.voteA})</p>
                   <p>TEST Opt B Count: ({question.fields.voteB})</p> */}
                 {/* buttons A and B go here */}
                 </Card.Header>
                 <Card.Body>
-                <div className="buttons-container">
                   <Button
                     size="lg"
                     style={{ backgroundColor: "#FF5721", fontWeight: "bold" }}
-                    // onClick={() => vote(true)}
-                    vote={vote(true)}
+                    onClick={() => vote(true)}
                   >
                     {lastWord(question.fields.optionA)}
                   </Button>
                   <Button
                     size="lg"
                     style={{ backgroundColor: "#01ACB5", fontWeight: "bold", margin: "15px" }}
-                    // onClick={() => vote(false)}
-                    vote={vote(false)}
+                    onClick={() => vote(false)}
                   >
                     {lastWord(question.fields.optionB)}
                   </Button>
-                </div>
                 </Card.Body>
               </Card>
           );
