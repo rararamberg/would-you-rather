@@ -1,10 +1,24 @@
 import './Home.css';
 
 function Home() {
+
+  const gifs = [
+    {
+      src: "https://giphy.com/embed/ZqlvCTNHpqrio",
+    },
+    {
+      src: "https://giphy.com/embed/RJOn3p1xMXDjHiKU5S",
+      height: "271"
+    }
+  ]
   return (
     <main className="home">
       <h1>Welcome to WYR!</h1>
       <div className="gif-collage">
+        {gifs.map((gif) => (
+          <iframe {...gif} frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
+        ))}
+
         <iframe src="https://giphy.com/embed/ZqlvCTNHpqrio" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
         <iframe src="https://giphy.com/embed/RJOn3p1xMXDjHiKU5S" width="480" height="271" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
         <iframe src="https://giphy.com/embed/snEeOh54kCFxe" width="480" height="271" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>

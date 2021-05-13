@@ -1,5 +1,6 @@
 footer {
   padding: 15px 5px;
+  font-family: 'Luckiest Guy', cursive;
 }
 
 footer a {
@@ -9,5 +10,10 @@ footer a {
   
 }
 footer a:hover {
-  color: #FF4304;
+  color: #ff5722;
+}
+
+footer p {
+  word-spacing: 2px;
+  letter-spacing: 2px;
 }
