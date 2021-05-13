@@ -21,7 +21,11 @@ function Results(props) {
         {props.questions.map((question) => {
           return (
             <Accordion>
-              <Card key={question.id} className="question-result">
+              <Card
+                key={question.id}
+                className="question-result"
+                style={{color: "#303841"}}
+              >
                 <Card.Header>
                   <Card.Title>
                     WYR...

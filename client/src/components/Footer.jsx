@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer>
       {/* include linked logos for github and linkedin */}
-      <p>© RAR 2021</p>
+      <p style={{fontWeight: 'bold'}}>© RAR 2021</p>
     </footer>
   )
 }

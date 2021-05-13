@@ -1,8 +1,8 @@
 function HowTo() {
   return (
     <main className="how-to">
-      <h2>This is the How To Use App page</h2>
-      <p>Accessibility info goes here</p>
+      <h2>How Do I Do?</h2>
+      <p>Learn more about the app below.</p>
       <section className="what-is">
         <h3>What is WYR?</h3>
         <p>

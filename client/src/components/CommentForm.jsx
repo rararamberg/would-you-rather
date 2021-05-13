@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Button from "react-bootstrap/Button";
 import { commentsBaseURL, config } from '../services';
 import axios from 'axios';
 
@@ -39,7 +40,7 @@ function CommentForm(props) {
         value={comment}
         onChange={(e) => setComment(e.target.value)}
       />
-      <button>Add</button>
+      <Button style={{backgroundColor: "#303841", fontWeight: 'bold'}}>Add</Button>
     </form>
   )
 }

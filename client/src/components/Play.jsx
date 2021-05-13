@@ -1,4 +1,5 @@
 import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
@@ -32,11 +33,11 @@ function Play(props) {
 
   return (
     <main className="play">
-      <h2>This is the Play Page</h2>
+      <h2>Now it's Your Turn..</h2>
       <p>
-        Here players will get taken through each question and input their
-        decision of WYR
+        Go with your heart!  Your gut?  Your logic?  Either way, you choose!
       </p>
+      <div className="question-container">
       {/* first set all questions here */}
       {/* map questions with a prop of  and display each question with */}
       {props.questions.map((question) => {
@@ -45,33 +46,42 @@ function Play(props) {
         }
         if (question === props.questions[currQ]) {
           return (
-            <div key={question.id} className="question-prompt">
-              <h3 className="wyr">Would you rather...</h3>
-              <p className="option-a">{question.fields.optionA}</p>
-              <p className="or">OR</p>
-              <p classname="option-b">{question.fields.optionB}</p>
-              {/* test tag for opt a count */}
-              {/* <p>TEST Opt A Count: ({question.fields.voteA})</p>
-              <p>TEST Opt B Count: ({question.fields.voteB})</p> */}
-              {/* buttons A and B go here */}
-              <Button
-                size="lg"
-                style={{ backgroundColor: "#00adb5", fontWeight: "bold" }}
-                onClick={() => vote(true)}
-              >
-                {lastWord(question.fields.optionA)}
-              </Button>
-              <Button
-                size="lg"
-                style={{ backgroundColor: "#ff5722", fontWeight: "bold" }}
-                onClick={() => vote(false)}
-              >
-                {lastWord(question.fields.optionB)}
-              </Button>
-            </div>
+            <Card
+              key={question.id}
+              className="question-prompt"
+              style={{color: "#303841"}}
+            >
+                <Card.Body>
+                  <h3 className="wyr">Would you rather...</h3>
+                  <p className="option-a">{question.fields.optionA}</p>
+                  <p className="or">OR</p>
+                  <p classname="option-b">{question.fields.optionB}</p>
+                  {/* test tag for opt a count */}
+                  {/* <p>TEST Opt A Count: ({question.fields.voteA})</p>
+                  <p>TEST Opt B Count: ({question.fields.voteB})</p> */}
+                {/* buttons A and B go here */}
+                <div className="buttons-container">
+                  <Button
+                    size="lg"
+                    style={{ backgroundColor: "#00adb5", fontWeight: "bold" }}
+                    onClick={() => vote(true)}
+                  >
+                    {lastWord(question.fields.optionA)}
+                  </Button>
+                  <Button
+                    size="lg"
+                    style={{ backgroundColor: "#ff5722", fontWeight: "bold", margin: "15px" }}
+                    onClick={() => vote(false)}
+                  >
+                    {lastWord(question.fields.optionB)}
+                  </Button>
+                </div>
+                </Card.Body>
+              </Card>
           );
         }
       })}
+      </div>
     </main>
   );
 }
