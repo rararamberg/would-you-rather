@@ -31,7 +31,7 @@ function App() {
           }
         }
       })
-      setComments(commentResp.data.records);
+      setComments(retrievedComments);
       setLinkedQuestions(retrievedQuestions)
     }
     fetchQuestionsAndComments();

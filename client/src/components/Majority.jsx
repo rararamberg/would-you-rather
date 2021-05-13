@@ -18,7 +18,7 @@ function Majority(props) {
         <p>
           <span
             className="majority"
-            style={{ color: "green", fontWeight: "bold" }}
+            style={{ color: "#FF4304", fontWeight: "bold" }}
           >
             A: {percentA + "%"}
           </span>{" "}
@@ -31,7 +31,7 @@ function Majority(props) {
           A: {percentA + "%"} vs.{" "}
           <span
             className="majority"
-            style={{ color: "green", fontWeight: "bold" }}
+            style={{ color: "#01ACB5", fontWeight: "bold" }}
           >
             B: {percentB + "%"}
           </span>
@@ -56,7 +56,7 @@ function Majority(props) {
       );
     }
   };
-
+ 
   const data = {
     labels: [lastWord(optionA), lastWord(optionB)],
     datasets: [
@@ -85,7 +85,7 @@ function Majority(props) {
   return (
     <div>
       {determineMajority(voteA, voteB)}
-
+      {/* Source: React Chart.js */}
       <Pie data={data} options={option} />
     </div>
   );

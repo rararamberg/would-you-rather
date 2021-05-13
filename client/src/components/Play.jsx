@@ -65,15 +65,17 @@ function Play(props) {
                 <div className="buttons-container">
                   <Button
                     size="lg"
-                    style={{ backgroundColor: "#00adb5", fontWeight: "bold" }}
-                    onClick={() => vote(true)}
+                    style={{ backgroundColor: "#FF5721", fontWeight: "bold" }}
+                    // onClick={() => vote(true)}
+                    vote={vote(true)}
                   >
                     {lastWord(question.fields.optionA)}
                   </Button>
                   <Button
                     size="lg"
-                    style={{ backgroundColor: "#ff5722", fontWeight: "bold", margin: "15px" }}
-                    onClick={() => vote(false)}
+                    style={{ backgroundColor: "#01ACB5", fontWeight: "bold", margin: "15px" }}
+                    // onClick={() => vote(false)}
+                    vote={vote(false)}
                   >
                     {lastWord(question.fields.optionB)}
                   </Button>

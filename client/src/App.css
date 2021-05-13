@@ -45,7 +45,6 @@ form {
   flex-direction: column;
 }
 
-
 form button {
   transition: all 0.2s ease-in-out;
 }
@@ -63,6 +62,11 @@ form button {
   height: auto;
   padding: 10px;
   margin: 10px;
+}
+
+.card-header {
+  height: 461px;
+  width: auto;
 }
 
 /* NAV */
@@ -103,6 +107,7 @@ nav .short-text {
 }
 
 
+/* HOW TO */
 .how-to {
   margin: 0 auto;
   padding: 5px 10px;
@@ -144,6 +149,10 @@ nav .short-text {
   align-content: space-between;
 }
 
+.question-prompt {
+  padding:10px;
+}
+
 /* FOOTER */
 
 footer a {
@@ -156,19 +165,28 @@ footer a:hover {
 }
 
 
+/* MEDIA Query */
 @media screen and (max-width: 768px) {
   nav {
     flex-direction: column;
+    margin-bottom: 35px;
+  }
+
+  nav a, nav span {
+    font-size: 30px;
+    margin-top: 20px;
   }
 
   nav .full-text {
     font-size: 75px;
-    margin: 10px 0px 35px 0px;
+    margin: 10px 0px 10px 0px;
   }
 
   .menu-items {
-    margin-bottom: 35px;
+    margin-top: 25px;
   }
+  
+  
 }
 
 @media screen and (max-width: 600px) {
