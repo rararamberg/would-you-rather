@@ -3,8 +3,8 @@ import Card from "react-bootstrap/Card";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
-import { questionsBaseURL, config } from "../services";
-import { lastWord, findEmoji } from "../services";
+import { questionsBaseURL, config, lastWord, findEmoji} from "../services";
+import "./Play.css";
 
 function Play(props) {
   const [currQ, setCurrQ] = useState(0);
@@ -16,12 +16,11 @@ function Play(props) {
   const vote = async (isA) => {
     console.log('click')
     const updatedQuestion = {
-      ...props.questions[currQ].fields,
       voteA: props.questions[currQ].fields.voteA + (isA ? 1 : 0),
       voteB: props.questions[currQ].fields.voteB + (isA ? 0 : 1),
     };
     const specificQuestionsURL = `${questionsBaseURL}/${props.questions[currQ].id}`;
-    await axios.put(specificQuestionsURL, { fields: updatedQuestion }, config);
+    await axios.patch(specificQuestionsURL, { fields: updatedQuestion }, config);
     props.setToggleFetch((curr) => !curr);
 
     if (currQ === props.questions.length - 1) {

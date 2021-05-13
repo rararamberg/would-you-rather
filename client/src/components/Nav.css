@@ -1,0 +1,33 @@
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+}
+
+nav a {
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 2px solid transparent;
+}
+nav a:hover {
+  border-bottom: 2px solid currentColor;
+}
+
+nav .short-text {
+  display: none;
+}
+
+.menu-items {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+}
+
+.menu-items a {
+  color: #00adb5;
+  font-weight: bold;
+}

@@ -1,4 +1,5 @@
 // import link and route??
+import './Footer.css';
 
 function Footer() {
   return (

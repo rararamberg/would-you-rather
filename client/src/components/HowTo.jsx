@@ -1,3 +1,5 @@
+import './HowTo.css';
+
 function HowTo() {
   return (
     <main className="how-to">

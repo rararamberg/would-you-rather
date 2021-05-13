@@ -1,0 +1,17 @@
+.question-container {
+  padding: 20px;
+}
+
+
+.buttons-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+}
+
+.question-prompt {
+  padding:10px;
+  height: 450px;
+  width: auto;
+}

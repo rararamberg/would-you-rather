@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Button from "react-bootstrap/Button";
 import { commentsBaseURL, config } from '../services';
 import axios from 'axios';
+import './CommentForm.css';
 
 // may combine to CommentFeed
 function CommentForm(props) {

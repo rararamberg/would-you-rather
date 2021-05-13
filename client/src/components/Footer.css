@@ -1,0 +1,13 @@
+footer {
+  padding: 15px 5px;
+}
+
+footer a {
+  margin: 5px;
+  color:#EEEEEE;
+  transition: all 0.2s ease-in-out;
+  
+}
+footer a:hover {
+  color: #FF4304;
+}

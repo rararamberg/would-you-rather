@@ -5,6 +5,7 @@ import CommentFeed from "./CommentFeed";
 import CommentForm from "./CommentForm";
 import Majority from "./Majority";
 import { findEmoji } from '../services';
+import './Results.css';
 
 function Results(props) {
   // const filterComments = (question) =>
