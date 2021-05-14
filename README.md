@@ -2,7 +2,7 @@
 
 ## Would You Rather?
 
-[W-Y-R Link] ()
+[W-Y-R Link](https://elastic-kalam-117d0e.netlify.app/results)
 
 ## Project Description
 
@@ -152,27 +152,27 @@ This schedule will be used to keep track of your progress throughout the week an
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | AirTable Setup | H | 1hrs| .5hrs | .5hrs |
-| Core Application Structure | H | 1.5hrs| 1hrs | Xhrs |
-| Pseudocode | H | 2.5hrs| 1.5hrs | Xhrs |
-| Nav and Footer | H | 2hrs| .5hrs | Xhrs |
-| Play and Questions Structure | H | 3hrs| 1hrs | Xhrs |
-| Results and Comments Structure | H | 3hrs| 1.5hrs | Xhrs |
-| How to Structure | H | 2hrs| .5hrs | Xhrs |
-| Play Get, Set Data | H | 6hrs| 2hrs | Xhrs | |
-| Results Get, Set Data | H | 6hrs| 2hrs | Xhrs | |
-| Link Route Components | H | 2hrs| 1hrs | Xhrs
-| Play Q&A Post: Data Create and Update | H | 5hrs| 3hrs | Xhrs |
-|Results & CommentPost: Data Create and Update | H | 5hrs| 2.5hrs | Xhrs |
-| Nav and Footer CSS Components | H | 2hrs| .5hrs | Xhrs |
-| How To Page CSS | H | 2hrs| .5hrs | Xhrs |
-| Play and Questions CSS | H | 2hrs| 1hrs | Xhrs |
-| Results CSS | H | 2hrs| 1hrs | Xhrs |
-| Homepage CSS  | H | 2hrs| 1hrs | Xhrs |
-| PMVP | H | 7hrs| 5hrs | Xhrs |
-| Advanced CSS | H | 4hrs| 2hrs | Xhrs |
-| Site Run-Through and Test | H | 1hrs| .5hrs | Xhrs |
-| Clean Up Code and Comments | H | 1.5hrs| Xhrs | Xhrs |
-| Total | H | Xhrs| Xhrs | Xhrs |
+| Core Application Structure | H | 1.5hrs| 1hrs | 1hrs |
+| Pseudocode | H | 2.5hrs| 1.5hrs | 1.5hrs |
+| Nav and Footer | H | 2hrs| .5hrs | .5hrs |
+| Play and Questions Structure | H | 3hrs| 1hrs | 1hrs |
+| Results and Comments Structure | H | 3hrs| 1.5hrs | 1.5hrs |
+| How to Structure | H | 2hrs| .5hrs | .5hrs |
+| Play Get, Set Data | H | 6hrs| 2hrs | 2hrs | |
+| Results Get, Set Data | H | 6hrs| 2hrs | 2hrs | |
+| Link Route Components | H | 2hrs| 1hrs | 1hrs
+| Play Q&A Post: Data Create and Update | H | 5hrs| 3hrs | 3hrs |
+|Results & CommentPost: Data Create and Update | H | 5hrs| 2.5hrs | 2.5hrs |
+| Nav and Footer CSS Components | H | 2hrs| .5hrs | .5hrs |
+| How To Page CSS | H | 2hrs| .5hrs | .5hrs |
+| Play and Questions CSS | H | 2hrs| 1hrs | 1hrs |
+| Results CSS | H | 2hrs| 1hrs | 1hrs |
+| Homepage CSS  | H | 2hrs| 1hrs | 1hrs |
+| PMVP | H | 7hrs| 5hrs | 5hrs |
+| Advanced CSS | H | 4hrs| 2hrs | 2hrs |
+| Site Run-Through and Test | H | 1hrs| .5hrs | .5hrs |
+| Clean Up Code and Comments | H | 1.5hrs| .5hrs | .5hrs |
+| Total | H | 53.5hrs| 30.5hrs | 30.5hrs |
 
 ## SWOT Analysis
 
