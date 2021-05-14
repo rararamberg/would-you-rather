@@ -134,17 +134,17 @@ This schedule will be used to keep track of your progress throughout the week an
 |  Day | Deliverable | Status
 |---|---| ---|
 |May 6-7| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
-|May 7| Project Approval | Incomplete
-|May 7| Core Application Structure: .env, folders,  | Incomplete
-|May 7| Pseudocode | Incomplete
-|May 7| Skeletal Component structure / Get, Set Data | Incomplete
-|May 8| Continue Component Structure| Incomplete
-|May 8| Post | Incomplete
-|May 9| Cont'd Post| Incomplete
-|May 10|CSS Components| Incomplete
-|May 11| MVP | Incomplete
-|May 12| Deployed MVP | Incomplete
-|May 13| PMVP and Advanced CSS | Incomplete
+|May 7| Project Approval | Complete
+|May 7| Core Application Structure: .env, folders,  | Complete
+|May 7| Pseudocode | Complete
+|May 7| Skeletal Component structure / Get, Set Data | Complete
+|May 8| Continue Component Structure| Complete
+|May 8| Post | Complete
+|May 9| Cont'd Post| Complete
+|May 10|CSS Components| Complete
+|May 11| MVP | Complete
+|May 12| Deployed MVP | Complete
+|May 13| PMVP and Advanced CSS | Mostly Complete
 |May 14| Presentations | Incomplete
 
 ## Timeframes
@@ -152,25 +152,25 @@ This schedule will be used to keep track of your progress throughout the week an
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | AirTable Setup | H | 1hrs| .5hrs | .5hrs |
-| Core Application Structure | H | 1.5hrs| Xhrs | Xhrs |
-| Pseudocode | H | 2.5hrs| Xhrs | Xhrs |
-| Nav and Footer | H | 2hrs| Xhrs | Xhrs |
-| Play and Questions Structure | H | 3hrs| Xhrs | Xhrs |
-| Results and Comments Structure | H | 3hrs| Xhrs | Xhrs |
-| How to Structure | H | 2hrs| Xhrs | Xhrs |
-| Play Get, Set Data | H | 6hrs| Xhrs | Xhrs | |
-| Results Get, Set Data | H | 6hrs| Xhrs | Xhrs | |
-| Link Route Components | H | 2hrs| Xhrs | Xhrs
-| Play Q&A Post: Data Create and Update | H | 5hrs| Xhrs | Xhrs |
-|Results & CommentPost: Data Create and Update | H | 5hrs| Xhrs | Xhrs |
-| Nav and Footer CSS Components | H | 2hrs| Xhrs | Xhrs |
-| How To Page CSS | H | 2hrs| Xhrs | Xhrs |
-| Play and Questions CSS | H | 2hrs| Xhrs | Xhrs |
-| Results CSS | H | 2hrs| Xhrs | Xhrs |
-| Homepage CSS  | H | 2hrs| Xhrs | Xhrs |
-| PMVP | H | 7hrs| Xhrs | Xhrs |
-| Advanced CSS | H | 4hrs| Xhrs | Xhrs |
-| Site Run-Through and Test | H | 1hrs| Xhrs | Xhrs |
+| Core Application Structure | H | 1.5hrs| 1hrs | Xhrs |
+| Pseudocode | H | 2.5hrs| 1.5hrs | Xhrs |
+| Nav and Footer | H | 2hrs| .5hrs | Xhrs |
+| Play and Questions Structure | H | 3hrs| 1hrs | Xhrs |
+| Results and Comments Structure | H | 3hrs| 1.5hrs | Xhrs |
+| How to Structure | H | 2hrs| .5hrs | Xhrs |
+| Play Get, Set Data | H | 6hrs| 2hrs | Xhrs | |
+| Results Get, Set Data | H | 6hrs| 2hrs | Xhrs | |
+| Link Route Components | H | 2hrs| 1hrs | Xhrs
+| Play Q&A Post: Data Create and Update | H | 5hrs| 3hrs | Xhrs |
+|Results & CommentPost: Data Create and Update | H | 5hrs| 2.5hrs | Xhrs |
+| Nav and Footer CSS Components | H | 2hrs| .5hrs | Xhrs |
+| How To Page CSS | H | 2hrs| .5hrs | Xhrs |
+| Play and Questions CSS | H | 2hrs| 1hrs | Xhrs |
+| Results CSS | H | 2hrs| 1hrs | Xhrs |
+| Homepage CSS  | H | 2hrs| 1hrs | Xhrs |
+| PMVP | H | 7hrs| 5hrs | Xhrs |
+| Advanced CSS | H | 4hrs| 2hrs | Xhrs |
+| Site Run-Through and Test | H | 1hrs| .5hrs | Xhrs |
 | Clean Up Code and Comments | H | 1.5hrs| Xhrs | Xhrs |
 | Total | H | Xhrs| Xhrs | Xhrs |
 
