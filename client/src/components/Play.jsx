@@ -22,7 +22,7 @@ function Play(props) {
     props.setToggleFetch((curr) => !curr);
 
     if (currQ === props.questions.length - 1) {
-      console.log("game completed, forward to results page");
+      // game completed, forward to results page
       history.push("/results");
     } else {
       setCurrQ(currQ + 1);

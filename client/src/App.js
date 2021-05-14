@@ -37,9 +37,6 @@ function App() {
     fetchQuestionsAndComments();
   }, [toggleFetch]);
 
-  // console.log(questions);
-  // console.log(comments);
-
   return (
     <div className="App">
       <Nav />
