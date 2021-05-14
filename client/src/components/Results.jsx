@@ -8,10 +8,6 @@ import { findEmoji } from '../services';
 import './Results.css';
 
 function Results(props) {
-  // const filterComments = (question) =>
-  //   props.comments.filter(
-  //     (comment) => question.fields.commentId === comment.fields.questionId
-  //   );
   return (
     <main className="results-main">
       <h2 className="results-title">Results Are In!</h2>

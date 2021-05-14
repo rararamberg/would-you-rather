@@ -11,10 +11,8 @@ function Play(props) {
   const history = useHistory();
 
   // create function that takes you to next prompt
-  // console.log(props.questions.length);
   // create vote function
   const vote = async (isA) => {
-    console.log('click')
     const updatedQuestion = {
       voteA: props.questions[currQ].fields.voteA + (isA ? 1 : 0),
       voteB: props.questions[currQ].fields.voteB + (isA ? 0 : 1),
@@ -58,10 +56,6 @@ function Play(props) {
                   <span className="or">OR</span>
                   <span className="option-b">{question.fields.optionB}</span>
                 </Card.Subtitle>
-                  {/* test tag for opt a count */}
-                  {/* <p>TEST Opt A Count: ({question.fields.voteA})</p>
-                  <p>TEST Opt B Count: ({question.fields.voteB})</p> */}
-                {/* buttons A and B go here */}
                 </Card.Header>
                 <Card.Body>
                 <Button

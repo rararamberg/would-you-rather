@@ -28,7 +28,6 @@ function Home() {
       height: "264"
     }
   ]
-  console.log(gifs)
 
   const randomImage = () => {
     const randomNum = Math.floor(Math.random() * (gifs.length - 1));
