@@ -34,13 +34,14 @@
   padding-top: 20px;
 }
 
-span {
-  line-height: 45px;
-}
 
 .option-a, .option-b {
   font-weight: bold;
-  margin: 0px 5px;
+}
+
+.option-a, .option-b, .or{
+  line-height: 45px;
+  margin: 0px 15px;
 }
 
 .question-container {
