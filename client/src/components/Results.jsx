@@ -14,8 +14,8 @@ function Results(props) {
   //   );
   return (
     <main className="results-main">
-      <h2>Results Are In!</h2>
-      <p>See below what scenario won over other</p>
+      <h2 className="results-title">Results Are In!</h2>
+      <p className="description">See below what scenario won over other</p>
       {/* questions.map()to display each Qs results */}
       {/* click or tap to show more and display comments section */}
       <div className="results-container">
@@ -28,23 +28,22 @@ function Results(props) {
                 style={{color: "#303841"}}
               >
                 <Card.Header>
-                  <Card.Title>
+                  <Card.Title className="wyr">
                     WYR... {findEmoji(question.fields.category)}
                   </Card.Title>
-                  <Card.Subtitle>
+                  <Card.Subtitle className="results-ab">
                     {question.fields.optionA}.. OR ..
                     {question.fields.optionB}
                   </Card.Subtitle>
-                  <Card.Text>
                     {/* use percentages to display */}
                     <Majority question={question} />
-                  </Card.Text>
                   {/* insert comment feed component */}
                   {/* insert comment form */}
                   <Accordion.Toggle
                     as={Button}
                     variant="link"
                     eventKey={question.id}
+                    className="join"
                   >
                     Join Discussion
                   </Accordion.Toggle>

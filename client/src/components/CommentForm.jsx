@@ -42,7 +42,11 @@ function CommentForm(props) {
         value={comment}
         onChange={(e) => setComment(e.target.value)}
       />
-      <Button type="submit" style={{backgroundColor: "#303841", fontWeight: 'bold', margin: '10px'}}>Add</Button>
+      <Button
+        variant="dark"
+        type="submit"
+        className="submit-btn"
+        >Add</Button>
     </form>
   )
 }

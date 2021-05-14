@@ -1,3 +1,10 @@
 .author {
   font-style: italic;
 }
+
+.comment p{
+  margin: 0 auto;
+  padding-top: 5px;
+  padding-bottom: 0px;
+  line-height: 15px;
+}

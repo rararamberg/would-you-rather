@@ -51,10 +51,7 @@
   .menu-items span {
     font-size: 28px;
     margin: 0px 10px;
-  }
-
-  
-  
+  } 
 }
 
 @media screen and (max-width: 600px) {
@@ -78,6 +75,15 @@
   .menu-items span {
     font-size: 20px;
     margin: 0px 5px;
+  }
+
+  /* HOME */
+  .gif-collage {
+    display: none;
+  }
+
+  .rando-gif {
+    display: inline-block;
   }
 
   /* HOW TO */
@@ -128,5 +134,10 @@
     overflow-x: scroll;
     height: 515px;
     width: auto;
+  }
+
+  .join {
+    bottom: 0;
+    left: 37px;
   }
 }

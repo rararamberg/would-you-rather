@@ -11,40 +11,38 @@ function Majority(props) {
   // Reference: https://stackoverflow.com/questions/20883404/javascript-returning-the-last-word-in-a-string
 
   const determineMajority = (a, b) => {
-    const percentA = Math.round((a / (a + b)) * 100);
-    const percentB = Math.round((b / (a + b)) * 100);
-    if (percentA > percentB) {
+    if (voteA > voteB) {
       return (
         <p>
           <span
             className="majority"
             style={{ color: "#FF4304", fontWeight: "bold" }}
           >
-            A: {percentA + "%"}
+            {voteA}
           </span>{" "}
-          vs. B: {percentB + "%"}
+          vs.{voteB}
         </p>
       );
-    } else if (percentB > percentA) {
+    } else if (voteB > voteA) {
       return (
         <p>
-          A: {percentA + "%"} vs.{" "}
+          {voteA} vs.{" "}
           <span
             className="majority"
             style={{ color: "#01ACB5", fontWeight: "bold" }}
           >
-            B: {percentB + "%"}
+          {voteB}
           </span>
         </p>
       );
-    } else if (percentA === percentB) {
+    } else if (voteA === voteB) {
       return (
         <p>
           <span
             className="majority"
             style={{ color: "green", fontWeight: "bold" }}
           >
-            A: {percentA + "%"} vs. B: {percentB + "%"}
+            {voteA} vs.  {voteB}
           </span>
         </p>
       );
@@ -84,9 +82,9 @@ function Majority(props) {
 
   return (
     <div>
-      {determineMajority(voteA, voteB)}
       {/* Source: React Chart.js */}
       <Pie data={data} options={option} />
+      {determineMajority(voteA, voteB)}
     </div>
   );
 }

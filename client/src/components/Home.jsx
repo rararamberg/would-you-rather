@@ -4,7 +4,7 @@ function Home() {
 
   const gifs = [
     {
-      src: "https://giphy.com/embed/lKXEBR8m1jWso",
+      src: "https://giphy.com/embed/bEVKYB487Lqxy",
       height: "360"
     },
     {
@@ -12,33 +12,40 @@ function Home() {
       height: "271"
     },
     {
-      src: "https://giphy.com/embed/snEeOh54kCFxe",
+      src: "https://giphy.com/embed/xT0xeseEWv7alfGrDy",
       height: "271"
     },
     {
-      src: "https://giphy.com/embed/YVgzWgYgrmEdW",
+      src: "https://giphy.com/embed/12PIT4DOj6Tgek",
       height: "240"
     },
     {
-      src: "https://giphy.com/embed/12PIT4DOj6Tgek",
+      src: "https://giphy.com/embed/YVgzWgYgrmEdW",
       height: "361"
     },
     {
-      src: "https://giphy.com/embed/bEVKYB487Lqxy",
+      src: "https://giphy.com/embed/lKXEBR8m1jWso",
       height: "264"
     }
   ]
+  console.log(gifs)
+
+  const randomImage = () => {
+    const randomNum = Math.floor(Math.random() * (gifs.length - 1));
+    return (gifs[randomNum].src) 
+  }
   
   return (
     <main className="home">
       <div className="gif-collage">
         {gifs.map((gif) => (
           <iframe {...gif} frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
-        ))}
-        <img src="https://i.imgur.com/vA4Bh6j.gif" />
+        ))}    
       </div>
+      <iframe className="rando-gif" src={randomImage()}></iframe>
     </main>
   );
 }
 
 export default Home;
+

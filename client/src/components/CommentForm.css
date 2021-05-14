@@ -6,3 +6,8 @@ form {
 form button {
   transition: all 0.2s ease-in-out;
 }
+
+.submit-btn {
+  font-weight: bold;
+  margin: 10px;
+}
