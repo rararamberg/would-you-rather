@@ -2,7 +2,7 @@
 
 ## Would You Rather?
 
-[W-Y-R Link](https://elastic-kalam-117d0e.netlify.app/results)
+[W-Y-R Link](https://wyr-game.netlify.app/)
 
 ## Project Description
 
